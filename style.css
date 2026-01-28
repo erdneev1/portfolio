@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+}
