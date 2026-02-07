@@ -2,12 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>erdni — portfolio</title>
+
+  <meta name="copyright" content="© erdni. All rights reserved.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
+  <!-- ✅ Новая шапка-навигация (вместо “зелёного” блока) -->
+  <header class="site-header">
+    <a class="brand" href="/">erdni</a>
+    <nav class="nav">
+      <a href="#gallery">portfolio</a>
+      <a href="/licensing.html">licensing</a>
+      <a href="mailto:erdneev1909@icloud.com">contact</a>
+    </nav>
+  </header>
+
+  <!-- ✅ Ваш “белый” блок оставляем (только дали класс для стилизации) -->
+  <header class="hero">
     <h1>erdni</h1>
     <p>photographs</p>
   </header>
@@ -31,10 +46,20 @@
     <img src="images/15.jpg" alt="photo 15">
   </main>
 
+  <!-- ✅ Футер с авторским правом -->
+  <footer class="site-footer">
+    <p>© <span id="y"></span> erdni. All photographs are copyrighted and may not be used without written permission.</p>
+    <p><a href="/licensing.html">Licensing &amp; Copyright</a></p>
+  </footer>
+
   <!-- 👇 модальное окно -->
   <div id="lightbox">
-    <img id="lightbox-img">
+    <img id="lightbox-img" alt="">
   </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 
   <!-- 👇 подключаем JS -->
   <script src="script.js"></script>
